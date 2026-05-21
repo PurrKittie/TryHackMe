@@ -1,0 +1,25 @@
+ Alert #8814 — Phishing: Inbound Email Suspicious Link
+
+**Дата:** 21.05.2026 18:11  
+**Severity:** Medium  
+**Verdict:** True Positive
+
+что увидел
+Входящее письмо на j.garcia@thetrydaily.thm от внешнего домена
+hrconnex.thm с темой "Action Required: Finalize Your Onboarding Profile"
+
+почему True Positive
+- Письмо inbound — пришло снаружи, не от внутреннего HR
+- Домен hrconnex.thm не принадлежит организации
+- URL содержит имя жертвы — персонализированная фишинговая ссылка
+- Социальная инженерия: срочность + онбординг тема
+
+ проверил
+- VirusTotal: домен hrconnex.thm
+- Whois: дата регистрации домена
+- Firewall/proxy логи: переходил ли j.garcia по ссылке
+
+действия
+ Изолировать если жертва кликнула
+ Заблокировать домен hrconnex.thm
+ Передать L2 на дальнейшее расследование
